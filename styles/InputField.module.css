@@ -1,0 +1,22 @@
+.input {
+    border: none;
+    background-color: var(--color-page) !important;
+    box-shadow: var(--shadow-down);
+    color: var(--color-text);
+}
+
+.input:hover {
+    box-shadow: var(--shadow-up);
+}
+
+.input:focus {
+    box-shadow: var(--shadow-up);
+    outline: none;
+    background-color: var(--color-page);
+    color: var(--color-text);
+}
+
+.text {
+    margin-top: 20px;
+    color: var(--color-text);
+}

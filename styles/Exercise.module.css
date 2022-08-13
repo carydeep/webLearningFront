@@ -1,0 +1,71 @@
+.wrapper {
+    min-height: 70vh;
+}
+
+.button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--color-page);
+    color: var(--color-text);
+    border-radius: 10px;
+    border: none;
+    box-shadow: var(--shadow-down);
+}
+
+.button:hover {
+    box-shadow: var(--shadow-up);
+    color: var(--color-brand);
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    color: var(--color-text);
+}
+
+.iconTitle {
+    margin-right: 10px;
+}
+
+.iconAdd {
+    color: rgb(0, 141, 94);
+}
+
+.iconQuestion {
+    color: rgb(0, 134, 134);
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: var(--color-text);
+    background-color: rgb(133, 133, 133);
+
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.question + .question {
+    margin-top: 20px;
+}
+
+.questionName {
+    margin: auto 0;
+}
+
+.questionModified {
+    display: flex;
+    align-items: center;
+}
+
+.questionModifiedIcon {
+    color: var(--color-text);
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.questionModifiedIcon:hover {
+    color: var(--color-brand);
+}

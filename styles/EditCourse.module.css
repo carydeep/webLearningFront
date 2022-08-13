@@ -1,0 +1,81 @@
+.text {
+    color: var(--color-text);
+}
+
+.textLink {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.textLink:hover {
+    color: var(--color-brand);
+}
+
+.text_icon {
+    margin: 0 10px;
+    font-size: medium;
+    color: var(--color-text);
+}
+
+.chapter {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chapter_button {
+    margin-left: 10px;
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+}
+
+.chapter_input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.chapter_input:focus{
+    border: 2px solid black;
+}
+
+.lesson {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(199, 192, 184);
+    padding: 3px 6px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.lesson + .lesson {
+    margin-top: 10px;
+}
+
+.button {
+    border: none;
+    background-color: var(--color-page);
+    box-shadow: var(--shadow-down);
+    padding: 5px 10px;
+    margin-top: 10px;
+    margin-left: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+.button:hover {
+    box-shadow: var(--shadow-up);
+}
+
+.button_addChapter {
+    border: none;
+    background-color: var(--color-page);
+    box-shadow: var(--shadow-down);
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.button_addChapter:hover {
+    box-shadow: var(--shadow-up);
+}

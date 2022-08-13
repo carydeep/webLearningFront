@@ -1,0 +1,25 @@
+.profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-radius: 15px;
+
+    background: var(--color-page);
+    box-shadow: var(--shadow-up);
+    color: var(--color-text);
+}
+
+.profile_button {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    background: var(--color-page);
+    color: var(--color-text);
+    box-shadow: var(--shadow-down);
+}
+
+.profile_button:hover {
+    box-shadow: var(--shadow-up);
+    color: var(--color-brand);
+}

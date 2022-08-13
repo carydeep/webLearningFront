@@ -1,0 +1,123 @@
+.container {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: var(--color-line) 1px solid;
+}
+
+.navBar {
+    position: absolute;
+}
+
+.bannerHome {
+    width: 100vw;
+    height: 100vh;
+}
+
+.image {
+    position: absolute;
+    right: 0;
+    background: url("../public/LineHome.png") no-repeat;
+
+    width: 60vw;
+    height: 35vh;
+    z-index: -100;
+}
+
+.banner {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    cursor: pointer;
+}
+
+.brand_first {
+    font-weight: bolder;
+    color: var(--color-brand);
+}
+
+.brand_last {
+    font-weight: bolder;
+    color: var(--color-text);
+}
+
+.theme {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.login {
+    color: var(--color-text);
+    text-decoration: none;
+    margin: auto 0px;
+}
+
+.login:hover {
+    color: var(--color-brand);
+}
+
+.text {
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+.input_group {
+    box-shadow: var(--shadow-down);
+    padding: 7px 15px;
+    border-radius: 20px;
+    margin: 0px 10px;
+    width: 250px;
+}
+
+.input_group:hover {
+    box-shadow: var(--shadow-up);
+}
+
+.input_icon {
+    background-color: transparent;
+    border: none;
+    color: var(--color-text);
+}
+
+.input_group:hover .input_icon {
+    color: var(--icon-search);
+}
+
+.input_text {
+    background-color: transparent;
+    border: none;
+}
+
+.input_text:focus {
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.contact {
+    font-size: 40px;
+    color: var(--color-text);
+}
+
+.contact + .contact {
+    margin-left: 20px;
+}
+
+.footer {
+    margin-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-text);
+}

@@ -1,0 +1,298 @@
+.wrapper {
+    min-height: 80vh;
+}
+
+.navHead {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+
+    background-color: var(--color-page);
+    box-shadow: var(--shadow-up);
+    border-radius: 15px;
+}
+
+.navBar {
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+    padding: 5px;
+
+    background-color: var(--color-page);
+    box-shadow: var(--shadow-up);
+    border-radius: 15px;
+}
+
+.navItem {
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.navItem + .navItem {
+    margin: 0 10px;
+}
+
+.navItem:hover {
+    box-shadow: var(--shadow-up);
+}
+
+.navItem.active {
+    box-shadow: var(--shadow-down);
+}
+
+.navItem.active .navLink {
+    color: var(--color-brand);
+}
+
+.navLink {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.navLink:hover {
+    color: var(--color-brand);
+}
+
+.question {
+    margin-left: 30px;
+    padding: 10px;
+    flex-grow: 1;
+}
+
+.statement {
+    display: flex;
+    color: var(--color-text);
+}
+
+.statement .number {
+    background-color: var(--color-brand);
+
+    width: 30px;
+    height: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+
+    font-size: smaller;
+    border-radius: 5px;
+}
+
+.statement .number .status {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-text);
+}
+
+.option .item {
+    padding: 15px;
+    border-top: 1px solid var(--color-text);
+    transition: all 0.2s ease-in-out;
+    display: flex;
+}
+
+.option .item.hover {
+    position: relative;
+    margin: 10px;
+    border: 2px solid rgb(134, 30, 160);
+}
+
+.option .item.hover::before {
+    content: "Đáp án của bạn";
+    position: absolute;
+    top: -15px;
+    left: 60px;
+    padding: 2px 10px;
+
+    border: 2px solid rgb(134, 30, 160);
+    background-color: var(--color-page);
+
+    border-radius: 10px;
+    font-size: smaller;
+}
+
+.option .item.incorrect {
+    position: relative;
+    margin: 20px;
+    border: 2px solid rgb(172, 59, 59);
+}
+
+.option .item.incorrect::before {
+    content: "Đáp án sai";
+    position: absolute;
+    top: -15px;
+    left: 60px;
+    padding: 2px 10px;
+
+    border: 2px solid rgb(172, 59, 59);
+    background-color: var(--color-page);
+
+    border-radius: 10px;
+    font-size: smaller;
+}
+
+.option .item.correct {
+    position: relative;
+    border: 2px solid rgb(30, 160, 58);
+}
+
+.option .item.correct::before {
+    content: "Đáp án đúng";
+    position: absolute;
+    top: -15px;
+    left: 60px;
+    padding: 2px 10px;
+
+    border: 2px solid rgb(30, 160, 58);
+    background-color: var(--color-page);
+
+    border-radius: 10px;
+    font-size: smaller;
+}
+
+.option .item:hover {
+    cursor: pointer;
+}
+
+.option .item .name {
+    margin-right: 15px;
+}
+
+.option .item .explain {
+    position: relative;
+    margin: 10px 0 10px auto;
+    padding: 20px;
+    border: 2px solid rgb(141, 141, 141);
+    border-radius: 10px;
+    min-width: 200px;
+}
+
+.option .item .explain::before {
+    content: "Giải thích";
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    padding: 2px 10px;
+
+    border: 2px solid rgb(141, 141, 141);
+    background-color: var(--color-page);
+
+    border-radius: 10px;
+    font-size: smaller;
+}
+
+.function {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.function .disable {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.function .button {
+    padding: 7px 15px;
+    border: none;
+    box-shadow: var(--shadow-down);
+    border-radius: 10px;
+    min-width: 80px;
+}
+
+.function .button:hover {
+    box-shadow: var(--shadow-up);
+    color: var(--color-brand);
+}
+
+.function .next {
+    --box: 40px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: var(--shadow-down);
+    width: var(--box);
+    height: var(--box);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.function .next:hover {
+    box-shadow: var(--shadow-up);
+    color: var(--color-brand);
+}
+
+.function .process {
+    margin: 0 15px;
+    color: var(--color-text);
+    font-size: small;
+    text-align: center;
+}
+
+.sumary {
+    margin-left: 30px;
+    padding: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-text);
+}
+
+.sumary .title {
+    border: 1px solid var(--color-text);
+    padding: 10px 40px;
+    border-radius: 20px;
+}
+
+.sumary .item {
+    width: 30vw;
+    margin-top: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+
+.sumary .item.correct {
+    border: 1px solid rgb(138, 202, 42);
+    color: rgb(138, 202, 42);
+}
+
+.sumary .item.incorrect {
+    border: 1px solid rgb(255, 47, 57);
+    color: rgb(255, 47, 57);
+}
+
+.sumary .item.notDone {
+    border: 1px solid rgb(151, 151, 151);
+    color: rgb(151, 151, 151);
+}
+
+.sumary .button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    box-shadow: var(--shadow-down);
+    color: var(--color-text);
+    border-radius: 10px;
+}
+
+.sumary .button:hover {
+    box-shadow: var(--shadow-up);
+    color: var(--color-brand);
+}

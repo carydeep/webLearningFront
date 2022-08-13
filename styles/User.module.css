@@ -1,0 +1,50 @@
+.card {
+    background-color: var(--color-page);
+    box-shadow: var(--shadow-up);
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    color: var(--color-text);
+}
+
+.card:hover.card_profile {
+    color: #d3a388;
+}
+
+.card:hover.card_course {
+    color: #7689de;
+}
+
+.card:hover.card_question {
+    color: #be2a2a;
+}
+
+.card_icon {
+    font-size: 50px;
+}
+
+.card_icon.card_icon_profile {
+    color: #d3a388;
+}
+
+.card_icon.card_icon_course {
+    color: #7689de;
+}
+
+.card_icon.card_icon_question {
+    color: #be2a2a;
+}
+
+.card_button {
+    margin-top: 20px;
+    text-decoration: none;
+    color: var(--color-text);
+    box-shadow: var(--shadow-down);
+    padding: 10px 25px;
+    border-radius: 10px;
+}
+
+.card_button:hover {
+    color: var(--color-brand);
+    box-shadow: var(--shadow-up);
+}

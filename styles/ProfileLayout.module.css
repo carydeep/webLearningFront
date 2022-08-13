@@ -1,0 +1,36 @@
+.bar {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 15px;
+
+    background: var(--color-page);
+    box-shadow: var(--shadow-up);
+}
+
+.bar_button {
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.bar_button + .bar_button {
+    margin-top: 5px;
+}
+
+.bar_button:hover {
+    background: var(--color-page);
+    box-shadow: var(--shadow-up);
+    color: var(--color-brand);
+}
+
+.bar_button.active {
+    box-shadow: var(--shadow-down);
+    color: var(--color-brand);
+}
+
+.content {
+    padding-left: 20px;
+}

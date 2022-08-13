@@ -1,0 +1,43 @@
+.input {
+    border: none;
+    background: transparent;
+    color: var(--color-text);
+}
+
+.input:focus {
+    outline: none;
+    background-color: transparent;
+    color: var(--color-text);
+}
+
+.formLabel {
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 5px;
+    background-color: rgb(141, 141, 141);
+}
+
+.option {
+    background-color: rgb(165, 51, 51);
+    width: 20px;
+    height: 160px;
+    margin: 0 3px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.optionName {
+    margin: auto 0;
+}
+
+.optionDelete {
+    position: absolute;
+    bottom: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}

@@ -1,0 +1,34 @@
+.select {
+    border: none;
+    padding: 7px 15px;
+    background-color: var(--color-page);
+    box-shadow: var(--shadow-down);
+    cursor: pointer;
+}
+
+.select + .select {
+    margin-left: 20px;
+}
+
+.select:hover {
+    box-shadow: var(--shadow-up);
+}
+
+.select:focus {
+    color: var(--color-active);
+    outline: none;
+}
+
+.button {
+    background-color: var(--color-page);
+    box-shadow: var(--shadow-down);
+    color: var(--color-text);
+    border: none;
+    border-radius: 5px;
+    padding: 7px 15px;
+    margin-left: 10px;
+}
+
+.button:hover {
+    box-shadow: var(--shadow-up);
+}

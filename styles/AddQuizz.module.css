@@ -1,0 +1,150 @@
+.nav {
+    display: flex;
+    border-bottom: 1px solid var(--color-text);
+    margin-top: 5px;
+}
+
+.navItem {
+    padding: 6px 10px;
+    min-width: 90px;
+    border: 1px solid rgb(99, 99, 99);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(141, 141, 141);
+}
+
+.navItem + .navItem {
+    margin-left: 1px;
+}
+
+.navItem.active,
+.navItem:hover {
+    background-color: rgb(41, 155, 126);
+}
+
+.navItem .name {
+    margin: auto 0;
+}
+
+.navItem .button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    font-size: 12px;
+}
+.navItem .button {
+    margin-left: 5px;
+}
+
+.navItem .button:hover {
+    color: var(--color-brand);
+}
+
+.navItem .input {
+    background-color: transparent;
+    border: none;
+}
+
+.navItem .navLink {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.navAdd {
+    margin-left: 2px;
+    font-size: 40px;
+    color: var(--color-brand);
+    cursor: pointer;
+}
+
+.input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: var(--color-text);
+}
+
+.input:focus {
+    outline: none;
+    background-color: transparent;
+    color: var(--color-text);
+}
+
+.formLabel {
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 5px;
+    background-color: rgb(141, 141, 141);
+}
+
+.options {
+    display: flex;
+}
+
+.options + .options {
+    margin-top: 10px;
+}
+
+.options .checkbox {
+    margin: auto 0;
+}
+
+.option {
+    background-color: rgb(165, 51, 51);
+    width: 20px;
+    height: auto;
+    margin: 0 3px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.option.active {
+    background-color: rgb(45, 160, 70);
+}
+
+.optionName {
+    margin: auto 0;
+}
+
+.optionDelete {
+    position: absolute;
+    bottom: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.addOption {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    min-width: 100px;
+
+    background-color: transparent;
+    color: var(--color-text);
+
+    border: none;
+    border-radius: 20px;
+    box-shadow: var(--shadow-down);
+}
+
+.addOption:hover {
+    color: var(--color-brand);
+    box-shadow: var(--shadow-up);
+}
+
+.addOption.center {
+    margin: 0 auto;
+}
+
+.errorMess {
+    color: #dc3545;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875em;
+}

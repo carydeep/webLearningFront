@@ -1,0 +1,54 @@
+.wrapper {
+    min-height: 80vh;
+}
+
+.text {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.text:hover {
+    color: var(--color-brand);
+}
+
+.text_icon {
+    margin: 0 10px;
+    font-size: medium;
+    color: var(--color-text);
+}
+
+.card {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 16rem;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--color-page);
+    box-shadow: var(--shadow-up);
+}
+
+.card_icon {
+    font-size: 50px;
+}
+
+.card_body {
+    text-align: center;
+    padding: 30px;
+    color: var(--color-text);
+}
+
+.card_button {
+    background: var(--color-page);
+    box-shadow: var(--shadow-down);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.card_button:hover {
+    box-shadow: var(--shadow-up);
+    color: var(--color-brand);
+}

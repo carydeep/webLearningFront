@@ -1,0 +1,88 @@
+.wrapper {
+    min-height: 80vh;
+}
+
+.text {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.text:hover {
+    color: var(--color-brand);
+}
+
+.text_icon {
+    margin: 0 10px;
+    font-size: medium;
+    color: var(--color-text);
+}
+
+.content {
+    background: var(--color-page);
+    box-shadow: var(--shadow-up);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.select {
+    border: none;
+    padding: 7px 15px;
+    background-color: var(--color-page);
+    box-shadow: var(--shadow-down);
+    cursor: pointer;
+}
+
+.select + .select {
+    margin-left: 20px;
+}
+
+.select:hover {
+    box-shadow: var(--shadow-up);
+}
+
+.select:focus {
+    color: var(--color-active);
+    outline: none;
+}
+
+.text_alert {
+    background-color: rgb(220, 53, 69);
+    color: white;
+
+    padding: 7px 15px;
+    margin-left: 15px;
+    border-radius: 5px;
+}
+
+.button {
+    background-color: var(--color-page);
+    box-shadow: var(--shadow-down);
+    border: none;
+    border-radius: 5px;
+    padding: 7px 15px;
+}
+
+.buttonDisable {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.button:hover {
+    box-shadow: var(--shadow-up);
+}
+
+.button + .button {
+    margin-left: 15px;
+}
+
+.button_close {
+    background-color: transparent;
+    border: none;
+}
+
+.sticky {
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+}

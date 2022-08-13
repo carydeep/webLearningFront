@@ -1,0 +1,19 @@
+.container {
+    background-color: var(--color-page);
+    box-shadow: var(--shadow-up);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.button {
+    margin-top: 20px;
+    background-color: var(--color-page);
+    box-shadow: var(--shadow-down);
+    border: none;
+    border-radius: 15px;
+    padding: 7px 15px;
+}
+
+.button:hover {
+    box-shadow: var(--shadow-up);
+}

@@ -1,0 +1,28 @@
+.barCourse {
+    background: var(--color-page);
+    box-shadow: var(--shadow-up);
+    border-radius: 15px;
+    padding: 5px;
+    color: var(--color-text);
+}
+
+.listChapter {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.link {
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.link:hover {
+    box-shadow: var(--shadow-up);
+}
+
+.link.active {
+    box-shadow: var(--shadow-down);
+    color: var(--color-brand);
+}

@@ -1,0 +1,46 @@
+.header {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+
+    background-color: var(--color-page);
+    box-shadow: var(--shadow-up);
+    border-radius: 15px;
+}
+
+.header_course {
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.header_course + .header_course {
+    margin: 0 10px;
+}
+
+.header_course:hover {
+    box-shadow: var(--shadow-up);
+}
+
+.header_course.active {
+    box-shadow: var(--shadow-down);
+    color: var(--color-brand);
+}
+
+.header_course.active .header_link {
+    color: var(--color-brand);
+}
+
+.header_link {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.header_link_home {
+    padding: 5px;
+    font-size: 20px;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+}

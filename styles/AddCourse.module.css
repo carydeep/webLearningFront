@@ -1,0 +1,130 @@
+.text {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.text:hover {
+    color: var(--color-brand);
+}
+
+.text_icon {
+    margin: 0 10px;
+    font-size: medium;
+    color: var(--color-text);
+}
+
+.main {
+    background-color: var(--color-page);
+    box-shadow: var(--shadow-up);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.group_course {
+    display: flex;
+    align-items: baseline;
+}
+
+.button_group {
+    background: transparent;
+    box-shadow: var(--shadow-down);
+    border-radius: 20px;
+    border: none;
+    padding: 5px 15px;
+}
+
+.button_group + .button_group {
+    margin-left: 10px;
+}
+
+.button_group:hover {
+    color: black;
+    box-shadow: var(--shadow-up);
+}
+
+.button_group_name {
+    background-color: transparent;
+    color: black;
+    border: none;
+}
+
+.button_group_name:hover {
+    background-color: transparent;
+}
+
+.button_group_cancel {
+    background-color: transparent;
+    border: none;
+    color: black;
+}
+
+.button_group_cancel:hover {
+    background-color: transparent;
+}
+
+.dropdown_topic {
+    color: black;
+    background: transparent;
+    box-shadow: var(--shadow-down);
+    border: none;
+    border-radius: 20px;
+
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+.dropdown_topic:hover {
+    box-shadow: var(--shadow-up);
+    background-color: transparent;
+}
+
+.dropdown_topic:focus {
+    box-shadow: var(--shadow-up);
+    background-color: var(--color-page);
+    outline: none;
+}
+
+.button_clear {
+    background: transparent;
+    box-shadow: var(--shadow-down);
+    border: none;
+    border-radius: 20px;
+
+    margin-left: 20px;
+    padding: 10px 30px;
+}
+
+.button_clear:hover {
+    box-shadow: var(--shadow-up);
+    color: black;
+}
+
+.checkbox {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+.checkbox_hidden {
+    display: none;
+}
+
+.checkbox:hover .checkbox_real {
+    box-shadow: var(--shadow-up);
+}
+
+.checkbox_real {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: var(--shadow-down);
+}
+
+.checkbox_hidden:checked ~ .checkbox_real {
+    background-color: rgb(175, 39, 175);
+    box-shadow: var(--shadow-up);
+}
