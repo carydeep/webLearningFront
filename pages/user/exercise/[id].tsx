@@ -50,6 +50,7 @@ function AddQuestion() {
     name: "",
     options: [
       {
+        _id: "",
         statement: "",
         explain: "",
         isRight: false,
@@ -106,6 +107,7 @@ function AddQuestion() {
       name: "",
       options: [
         {
+          _id: "",
           statement: "",
           explain: "",
           isRight: false,
