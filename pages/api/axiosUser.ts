@@ -27,6 +27,7 @@ const refreshToken = ()=>{
 
 const axiosUser = axios.create({
     baseURL: process.env.URL_API,
+    withCredentials:true,
     headers: {
         'content-type': 'application/json',
     },
