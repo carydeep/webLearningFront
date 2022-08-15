@@ -53,6 +53,7 @@ export default function SearchLayout({ children }: { children: ReactElement }) {
 
   const handleLogout = async () => {
     await authApi.logout()
+    localStorage.removeItem("refreshToken")
     dispatch(logoutSuccess())
     dispatch(resetCourse())
     dispatch(resetExercise())

@@ -3,9 +3,9 @@ import axiosClient from "./axiosClient"
 import axiosUser from "./axiosUser"
 
 const authApi = {
-    refreshToken:()=>{
+    refreshToken:(token:string|null|undefined)=>{
         const url = `/v1/auth/refreshToken`
-        return axiosClient.post(url)
+        return axiosClient.post(url,{token:token})
     },
     login:(username:string,password:string)=>{
         const url = `/v1/auth/login`

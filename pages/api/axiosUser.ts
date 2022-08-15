@@ -20,11 +20,6 @@ interface DecodedToken{
   "exp": number
 }
 
-const refreshToken = ()=>{
-    const url = `/v1/auth/refreshToken`
-    return axiosClient.post(url)
-}
-
 const axiosUser = axios.create({
     baseURL: process.env.URL_API,
     withCredentials:true,
@@ -41,13 +36,18 @@ axiosUser.interceptors.request.use(async (config: AxiosRequestConfig) => {
     try {
         if (config.headers && user) {
             let date = new Date()
+            let refreshTokenLocal
             const decodedToken:DecodedToken = jwtDecode(user.accessToken)
+            if (typeof window !== 'undefined') {
+                refreshTokenLocal = localStorage.getItem('refreshToken')
+              }
             if(decodedToken.exp < date.getTime()/1000){
-                const res = await refreshToken()
+                const res = await authApi.refreshToken(refreshTokenLocal)
                 const updateTokenUser = {
                     ...user,
                     accessToken:res.data.accessToken
                 }
+                localStorage.setItem("refreshToken",res.data.refreshToken)
                 dispatch(loginSuccess(updateTokenUser))
                 config.headers = {
                     token : `Bearer ${res.data.accessToken}`

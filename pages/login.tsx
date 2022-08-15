@@ -76,7 +76,9 @@ function LoginPage() {
                 try {
                   dispatch(loginStart())
                   const res = await authApi.login(username, password)
-                  dispatch(loginSuccess(res.data))
+                  const { refreshToken, ...anothers } = res.data
+                  localStorage.setItem("refreshToken", refreshToken)
+                  dispatch(loginSuccess(anothers))
                   router.push("/")
                 } catch (error) {
                   dispatch(loginFail())
