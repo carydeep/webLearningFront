@@ -3,11 +3,15 @@ import type { AppProps } from "next/app"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { AnimatePresence } from "framer-motion"
 import { ThemeProvider } from "next-themes"
-import { Provider } from "react-redux"
+import { Provider, useDispatch } from "react-redux"
 import { persistor, store } from "../redux/store"
 import { NextPage } from "next"
 import { ReactElement, ReactNode } from "react"
 import { PersistGate } from "redux-persist/integration/react"
+import { useAppDispatch } from "../redux/hooks"
+import { logoutSuccess } from "../redux/slices/authSlice"
+import { resetCourse } from "../redux/slices/courseSlice"
+import { resetExercise } from "../redux/slices/exerciseSlice"
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode

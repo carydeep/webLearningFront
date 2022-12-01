@@ -8,6 +8,7 @@ import Head from "next/head"
 import Link from "next/link"
 import { ChevronDoubleRight } from "react-bootstrap-icons"
 import { useAppSelector } from "../../../../../../redux/hooks"
+import withAuth from "../../../../../../components/HOC/withAuth"
 
 function ContentEditPage() {
   const router = useRouter()
@@ -101,4 +102,4 @@ function ContentEditPage() {
   )
 }
 
-export default ContentEditPage
+export default withAuth(ContentEditPage)

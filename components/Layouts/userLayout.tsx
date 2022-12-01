@@ -9,18 +9,25 @@ import authApi from "../../pages/api/authApi"
 import { useRouter } from "next/router"
 import { resetCourse } from "../../redux/slices/courseSlice"
 import { resetExercise } from "../../redux/slices/exerciseSlice"
+import withAuth from "../HOC/withAuth"
+import { User } from "../../models/user"
 
-function UserLayout({ children }: { children: ReactElement }) {
+interface UserLayoutProps {
+  children?: ReactElement
+  user?: User | null
+}
+
+function UserLayout(props: UserLayoutProps) {
+  const { children, user } = props
   const router = useRouter()
-  const user = useAppSelector((state) => state.authReducer.currentUser)
   const dispatch = useDispatch()
-  useEffect(() => {
-    !user && router.push("/")
-  }, [user])
+  // useEffect(() => {
+  //   !user && router.push("/")
+  // }, [user])
 
   const handleLogout = async () => {
     await authApi.logout()
-    localStorage.removeItem("refreshToken")
+    // localStorage.removeItem("refreshToken")
     dispatch(logoutSuccess())
     dispatch(resetCourse())
     dispatch(resetExercise())
@@ -54,4 +61,4 @@ function UserLayout({ children }: { children: ReactElement }) {
   )
 }
 
-export default UserLayout
+export default withAuth(UserLayout)

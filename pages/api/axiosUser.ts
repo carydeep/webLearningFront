@@ -33,13 +33,19 @@ axiosUser.interceptors.request.use(async (config: AxiosRequestConfig) => {
     // Handle token here ...
     // const dispatch = useDispatch()
     const user = store.getState().authReducer.currentUser
+    function getCookie (name:string) {
+        let value = `; ${document.cookie}`;
+        let parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop()?.split(';').shift();
+    }
     try {
         if (config.headers && user) {
             let date = new Date()
             let refreshTokenLocal
             const decodedToken:DecodedToken = jwtDecode(user.accessToken)
             if (typeof window !== 'undefined') {
-                refreshTokenLocal = localStorage.getItem('refreshToken')
+                // refreshTokenLocal = localStorage.getItem('refreshToken')
+                refreshTokenLocal = getCookie('refreshToken')
               }
             if(decodedToken.exp < date.getTime()/1000){
                 const res = await authApi.refreshToken(refreshTokenLocal)
@@ -47,7 +53,10 @@ axiosUser.interceptors.request.use(async (config: AxiosRequestConfig) => {
                     ...user,
                     accessToken:res.data.accessToken
                 }
-                localStorage.setItem("refreshToken",res.data.refreshToken)
+                // localStorage.setItem("refreshToken",res.data.refreshToken)
+                document.cookie = `refreshToken=${res.data.refreshToken};path=/;max-age=${
+                    60 * 60 * 24 * 364
+                  };`
                 dispatch(loginSuccess(updateTokenUser))
                 config.headers = {
                     token : `Bearer ${res.data.accessToken}`

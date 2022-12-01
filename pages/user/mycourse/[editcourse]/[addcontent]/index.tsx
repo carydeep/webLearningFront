@@ -26,6 +26,7 @@ import {
 } from "../../../../../redux/slices/courseSlice"
 import lessonApi from "../../../../api/lessonApi"
 import RunCode from "../../../../../components/RunCode/Runcode"
+import withAuth from "../../../../../components/HOC/withAuth"
 
 const SunEditor = dynamic(() => import("suneditor-react"), {
   ssr: false,
@@ -477,4 +478,4 @@ function AddContentPage() {
   )
 }
 
-export default AddContentPage
+export default withAuth(AddContentPage)

@@ -20,6 +20,7 @@ import topicApi from "../../api/topicApi"
 import courseApi from "../../api/courseApi"
 import { Toast, ToastContainer } from "react-bootstrap"
 import { ToastError } from "../../../models/error"
+import withAuth from "../../../components/HOC/withAuth"
 
 function AddCourse() {
   const router = useRouter()
@@ -174,4 +175,4 @@ function AddCourse() {
   )
 }
 
-export default AddCourse
+export default withAuth(AddCourse)

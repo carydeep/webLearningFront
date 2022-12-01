@@ -39,6 +39,7 @@ import {
 } from "../../../redux/slices/exerciseSlice"
 import { ToastError } from "../../../models/error"
 import { Exercise } from "../../../models/exercise"
+import withAuth from "../../../components/HOC/withAuth"
 
 function Question() {
   const handleShowEdit = () => setShowEdit(true)
@@ -405,4 +406,4 @@ function Question() {
   )
 }
 
-export default Question
+export default withAuth(Question)

@@ -77,7 +77,10 @@ function LoginPage() {
                   dispatch(loginStart())
                   const res = await authApi.login(username, password)
                   const { refreshToken, ...anothers } = res.data
-                  localStorage.setItem("refreshToken", refreshToken)
+                  // localStorage.setItem("refreshToken", refreshToken)
+                  document.cookie = `refreshToken=${refreshToken};path=/;max-age=${
+                    60 * 60 * 24 * 365
+                  };`
                   dispatch(loginSuccess(anothers))
                   router.push("/")
                 } catch (error) {

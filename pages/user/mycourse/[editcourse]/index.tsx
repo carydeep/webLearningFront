@@ -43,6 +43,7 @@ import courseApi from "../../../api/courseApi"
 import chapterApi from "../../../api/chapterApi"
 import lessonApi from "../../../api/lessonApi"
 import { Lesson } from "../../../../models/lesson"
+import withAuth from "../../../../components/HOC/withAuth"
 
 function EditCourse() {
   const router = useRouter()
@@ -673,4 +674,4 @@ function EditCourse() {
   )
 }
 
-export default EditCourse
+export default withAuth(EditCourse)

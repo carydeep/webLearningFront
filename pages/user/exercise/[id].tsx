@@ -28,6 +28,7 @@ import {
   updateQuestion,
 } from "../../../redux/slices/exerciseSlice"
 import { AddQuestionApi, Question } from "../../../models/exercise"
+import withAuth from "../../../components/HOC/withAuth"
 
 function AddQuestion() {
   const router = useRouter()
@@ -341,4 +342,4 @@ function AddQuestion() {
   )
 }
 
-export default AddQuestion
+export default withAuth(AddQuestion)

@@ -38,6 +38,7 @@ export const authSlice = createSlice({
       state.loading = false
       state.currentUser = null
       state.error = false
+      document.cookie = `refreshToken=;path=/;max-age=0;`
     },
     changeProfile:(state,action:PayloadAction<ChangeProfile>)=>{
       const {firstname,lastname} = action.payload
