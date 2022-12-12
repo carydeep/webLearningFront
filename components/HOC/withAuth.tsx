@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import { useRouter } from "next/router"
 import React, { ComponentType } from "react"
 import LoginPage from "../../pages/login"
@@ -5,7 +6,6 @@ import { useAppDispatch, useAppSelector } from "../../redux/hooks"
 import { logoutSuccess } from "../../redux/slices/authSlice"
 import { resetCourse } from "../../redux/slices/courseSlice"
 import { resetExercise } from "../../redux/slices/exerciseSlice"
-// eslint-disable-next-line react/display-name
 
 function withAuth<P>(Component: ComponentType<P>) {
   function getCookie(name: string) {
