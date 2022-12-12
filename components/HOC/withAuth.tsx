@@ -5,14 +5,14 @@ import { useAppDispatch, useAppSelector } from "../../redux/hooks"
 import { logoutSuccess } from "../../redux/slices/authSlice"
 import { resetCourse } from "../../redux/slices/courseSlice"
 import { resetExercise } from "../../redux/slices/exerciseSlice"
-
-function getCookie(name: string) {
-  let value = `; ${document.cookie}`
-  let parts = value.split(`; ${name}=`)
-  if (parts.length === 2) return parts.pop()?.split(";").shift()
-}
+// eslint-disable-next-line react/display-name
 
 function withAuth<P>(Component: ComponentType<P>) {
+  function getCookie(name: string) {
+    let value = `; ${document.cookie}`
+    let parts = value.split(`; ${name}=`)
+    if (parts.length === 2) return parts.pop()?.split(";").shift()
+  }
   return (props: P) => {
     const router = useRouter()
     const dispatch = useAppDispatch()
