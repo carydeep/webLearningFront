@@ -15,7 +15,6 @@ interface url {
 
 function CourseID() {
   const router = useRouter()
-  // console.log(router.query)
   const { courseID } = router.query
   const [title, setTitle] = useState<string>()
   const [dataContent, setDataContent] = useState<Array<any | null>>([null])
@@ -23,8 +22,8 @@ function CourseID() {
   useEffect(() => {
     setDataContent([null])
     const fetch = async () => {
-      //   const resTopic = await courseApi.getCourse(courseID)
-      //   setTitle(resTopic.data.name)
+      // const resTopic = await courseApi.getCourse(courseID)
+      // setTitle(resTopic.data.name)
     }
     courseID && fetch()
   }, [courseID])
@@ -58,7 +57,7 @@ function CourseID() {
     <HomeLayout>
       <Fragment>
         <Head>
-          <title>{`${title}`}</title>
+          <title>Khóa học</title>
         </Head>
         <div className="container" style={{ minHeight: "80vh" }}>
           <HeaderCourse current={courseID} />

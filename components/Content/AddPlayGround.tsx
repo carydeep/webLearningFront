@@ -37,7 +37,9 @@ function AddPlayGround(props: addPlayGround) {
   useEffect(() => {
     const getLanguage = async () => {
       const res = await runcodeApi.getLanguage()
-      const languages = res.data.map((lang: { language: any }) => lang.language)
+      const languages = res.data.supportedLanguages.map(
+        (lang: { language: any }) => lang.language
+      )
       setAddrLanguage(languages)
     }
     getLanguage()

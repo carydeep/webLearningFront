@@ -8,8 +8,8 @@ import { useTheme } from "next-themes"
 interface outputProps {
   error?: string
   langague: string
-  success: boolean
   output?: string
+  status: number
 }
 
 interface runCodeProps {
@@ -75,7 +75,7 @@ const RunCode = (props: runCodeProps) => {
           </Button>
           {!close && (
             <Toast
-              bg={output?.success ? "dark" : "danger"}
+              bg={output?.status === 200 ? "dark" : "danger"}
               style={{ width: "100%" }}
               onClose={closeRunCode}
             >
@@ -85,10 +85,10 @@ const RunCode = (props: runCodeProps) => {
               </Toast.Header>
               <Toast.Body
                 className={`${styles.code_container} ${
-                  output?.success ? "text-white" : ""
+                  output?.status === 200 ? "text-white" : ""
                 }`}
               >
-                {output?.success ? output?.output : output?.error}
+                {output?.status === 200 ? output?.output : output?.error}
               </Toast.Body>
             </Toast>
           )}
