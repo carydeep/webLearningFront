@@ -61,6 +61,15 @@ describe("test register form", () => {
     })
   })
 
+  it("test regrex for password", () => {
+    const regrexPassword =
+      /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?([^\w\s]|[_])).{8,}$/
+    expect("123abcA@").toMatch(regrexPassword)
+    expect("123456789qQ").not.toMatch(regrexPassword)
+    expect("123abc@").not.toMatch(regrexPassword)
+    expect("123456qQ@").toMatch(regrexPassword)
+  })
+
   it("submit form with value", async () => {
     fireEvent.change(getFirstnameInput(), {
       target: { value: "testfirstname" },

@@ -7,6 +7,9 @@
 
 # testing
 /coverage
+# *.test.tsx
+# *.test.ts
+# /__test__
 
 # next.js
 /.next/

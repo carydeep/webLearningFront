@@ -50,16 +50,16 @@ function AddContentPage() {
   const [oldData, setOldData] = useState<Array<any>>([])
   // const [showButtonAdd, setShowButtonAdd] = useState<string>('')
   // const [valueChange, setValueChange] = useState<any>()
-  useEffect(() => {
-    // const thisChapter = thisCourse?.chapters.find(
-    //   (chapter) => chapter._id === chapterid
-    // )
-    // const thisLesson = thisChapter?.lessons.find(
-    //   (lesson) => lesson._id === lessonid
-    // )
-    // console.log(thisLesson)
-    // editcourse && chapterid && lessonid && fetch()
-  }, [editcourse, chapterid, lessonid])
+  // useEffect(() => {
+  //   // const thisChapter = thisCourse?.chapters.find(
+  //   //   (chapter) => chapter._id === chapterid
+  //   // )
+  //   // const thisLesson = thisChapter?.lessons.find(
+  //   //   (lesson) => lesson._id === lessonid
+  //   // )
+  //   // console.log(thisLesson)
+  //   // editcourse && chapterid && lessonid && fetch()
+  // }, [editcourse, chapterid, lessonid])
   // useEffect(() => {
   //     if (valueChange) {
   //         const newData = [...data]
@@ -82,6 +82,7 @@ function AddContentPage() {
   //     // setValue(newValue)
   //     setValueChange(valueContent)
   // }, [])
+
   const handleAdd = async (type: "text" | "playground") => {
     try {
       dispatch(startLoading())
@@ -219,7 +220,6 @@ function AddContentPage() {
               className={`${styles.button}`}
               onClick={() => handleAdd("playground")}
             >
-              {" "}
               Add PlayGround
             </button>
           </div>

@@ -1,58 +1,64 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { User } from '../../models/user'
+import { createSlice, PayloadAction } from "@reduxjs/toolkit"
+import { User } from "../../models/user"
 
-interface ChangeProfile{
-  firstname:string,
-  lastname:string
+interface ChangeProfile {
+  firstname: string
+  lastname: string
 }
 
 interface LoginState {
-  currentUser:User|null,
-  loading:boolean,
-  error:boolean
+  currentUser: User | null
+  loading: boolean
+  error: boolean
 }
 
 const initialState: LoginState = {
-  currentUser:null,
-  loading:false,
-  error:false
+  currentUser: null,
+  loading: false,
+  error: false,
 }
 
 export const authSlice = createSlice({
-  name: 'auth',
+  name: "auth",
   initialState,
   reducers: {
-    loginStart:(state)=>{
-        state.loading = true
+    loginStart: (state) => {
+      state.loading = true
     },
-    loginSuccess:(state,action)=>{
-        state.loading = false
-        state.currentUser = action.payload
-        state.error = false
+    loginSuccess: (state, action: PayloadAction<User>) => {
+      state.loading = false
+      state.currentUser = action.payload
+      state.error = false
     },
-    loginFail:(state)=>{
-        state.loading = false
-        state.error = true
+    loginFail: (state) => {
+      state.loading = false
+      state.error = true
     },
-    logoutSuccess:(state)=>{
+    logoutSuccess: (state) => {
       state.loading = false
       state.currentUser = null
       state.error = false
       document.cookie = `refreshToken=;path=/;max-age=0;`
     },
-    changeProfile:(state,action:PayloadAction<ChangeProfile>)=>{
-      const {firstname,lastname} = action.payload
+    changeProfile: (state, action: PayloadAction<ChangeProfile>) => {
+      const { firstname, lastname } = action.payload
       state.loading = false
-      if(state.currentUser){
+      if (state.currentUser) {
         state.currentUser.firstname = firstname
         state.currentUser.lastname = lastname
       }
-    }
+    },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { loginStart,loginSuccess,loginFail,logoutSuccess,changeProfile } = authSlice.actions
+export const {
+  loginStart,
+  loginSuccess,
+  loginFail,
+  logoutSuccess,
+  changeProfile,
+} = authSlice.actions
 
-const {reducer:authReducer} = authSlice
+const { reducer: authReducer } = authSlice
 export default authReducer
