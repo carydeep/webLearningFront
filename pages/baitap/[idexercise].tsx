@@ -97,7 +97,6 @@ function QuestionPage() {
   const handleSumary = () => {
     setShowSumary(true)
   }
-  console.log(process)
   const handleReset = (resetForm: any) => {
     setProcess([])
     setYourAwser(undefined)

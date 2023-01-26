@@ -21,6 +21,13 @@ export interface Question {
 }
 
 interface Option {
+  _id: string
+  explain: string
+  isRight: boolean
+  statement: string
+}
+
+interface OptionApi {
   explain: string
   isRight: boolean
   statement: string
@@ -28,5 +35,5 @@ interface Option {
 
 export interface AddQuestionApi {
   name: string
-  options: Array<Option>
+  options: Array<OptionApi>
 }
